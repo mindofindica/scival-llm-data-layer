@@ -15,6 +15,24 @@ While [AnalyticsGPT](https://arxiv.org/abs/2602.09817) demonstrates LLM workflow
 - Supports complex queries (search, compare, trends, rankings)
 - Enables cross-product integration (any Elsevier product can query SciVal data via natural language)
 
+## ⚡ Quick Demo
+
+**See it in action** (no API key required):
+
+```bash
+npm install
+npm run dev          # Terminal 1: Start API server
+npx tsx examples/simulated-demo.ts  # Terminal 2: Run demo
+```
+
+This shows a realistic LLM conversation using the data layer:
+- User asks: *"Who is the most cited author?"*
+- LLM automatically calls `getTopEntities(entityType: "author", metric: "citations")`
+- System returns structured data
+- LLM synthesizes natural language response
+
+**Perfect for brainstorms and presentations** — see `examples/README.md` for more demos.
+
 ## 🏗️ Architecture
 
 ```
